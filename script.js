@@ -36,16 +36,7 @@ document.querySelectorAll('.faq-question').forEach(btn => {
   });
 });
 
-// === CAL MODAL ===
-function openCalModal() {
-  document.getElementById('cal-modal-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeCalModal() {
-  document.getElementById('cal-modal-overlay').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCalModal(); });
+// === CAL MODAL (Legacy - removed, using Calendly inline now) ===
 
 // === SMOOTH SCROLL FOR NAV ===
 document.querySelectorAll('a[href^="#"]').forEach(a => {
