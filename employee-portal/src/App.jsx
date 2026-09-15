@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import { ToastProvider } from './contexts/ToastContext';
 import ProtectedRoute from './components/common/ProtectedRoute';
@@ -31,7 +31,7 @@ import './styles/index.css';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <ToastProvider>
           <Routes>
@@ -80,7 +80,7 @@ function App() {
           </Routes>
         </ToastProvider>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
