@@ -23,7 +23,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/tokens.css">
@@ -103,17 +103,8 @@
     <div class="container header-inner">
 
       <!-- Logo -->
-      <a href="/" class="header-logo" aria-label="PeakSales – go to homepage" id="header-logo">
-        <svg class="header-logo-mark" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <!-- Mountain mark (simplified SVG representation) -->
-          <polygon points="18,4 30,28 6,28" fill="none" stroke="#D9A441" stroke-width="2"/>
-          <polygon points="18,4 24,18 12,18" fill="#D9A441" opacity="0.2"/>
-          <polygon points="10,28 18,14 26,28" fill="none" stroke="#9DB2BF" stroke-width="1.5" opacity="0.6"/>
-        </svg>
-        <div class="header-logo-text">
-          PEAK SALES
-          <span>Private Limited</span>
-        </div>
+      <a href="/" class="header-logo" aria-label="PeakSales - go to homepage" id="header-logo">
+        <img class="header-logo-img" src="images/logo.jpg" alt="PeakSales Logo" width="120" height="40">
       </a>
 
       <!-- Desktop nav -->
@@ -223,9 +214,7 @@
 
           <!-- Right column – portrait -->
           <div class="hero-portrait">
-            <div class="hero-portrait-placeholder" aria-label="Photo of Deepan Raj, Founder & CEO (coming soon)">
-              Portrait photo<br>coming soon<br><br>Deepan Raj<br>Founder &amp; CEO
-            </div>
+            <img class="hero-portrait-img" src="images/deepan-raj.jpg" alt="Deepan Raj, Founder &amp; CEO of PeakSales" width="400" height="533" loading="eager">
             <div class="hero-caption-card" aria-hidden="true">
               Deepan Raj · Founder &amp; CEO
             </div>
@@ -686,7 +675,7 @@
             <div class="leaders-grid">
 
               <div class="leader-card" id="leader-deepan">
-                <div class="leader-avatar" aria-label="Photo placeholder for Deepan Raj">Photo<br>coming<br>soon</div>
+                <div class="leader-avatar"><img src="images/deepan-raj.jpg" alt="Deepan Raj, Founder &amp; CEO"></div>
                 <div>
                   <div class="leader-name">Deepan Raj</div>
                   <div class="leader-title">Founder &amp; CEO</div>
@@ -695,7 +684,7 @@
               </div>
 
               <div class="leader-card" id="leader-cofounder">
-                <div class="leader-avatar" aria-label="Photo placeholder for Co-founder">Photo<br>coming<br>soon</div>
+                <div class="leader-avatar"><img src="images/founders.jpg" alt="PeakSales Co-founder" style="object-position: right top;"></div>
                 <div>
                   <div class="leader-name">Co-founder</div>
                   <div class="leader-title">Name to be confirmed</div>
@@ -917,12 +906,8 @@
 
         <!-- Col 1: Brand -->
         <div class="footer-brand">
-          <a href="/" class="footer-logo" aria-label="PeakSales – homepage">
-            <svg width="32" height="32" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-              <polygon points="18,4 30,28 6,28" fill="none" stroke="#D9A441" stroke-width="2"/>
-              <polygon points="10,28 18,14 26,28" fill="none" stroke="#9DB2BF" stroke-width="1.5" opacity="0.6"/>
-            </svg>
-            <span style="font-family:var(--ps-font-display);font-weight:700;font-size:1rem;color:var(--ps-snow);">PEAK SALES</span>
+          <a href="/" class="footer-logo" aria-label="PeakSales - homepage">
+            <img class="footer-logo-img" src="images/logo.jpg" alt="PeakSales">
           </a>
           <p class="footer-tagline">PeakSales Private Limited</p>
           <p class="footer-tagline" style="margin-top:-.25rem;">Climbing to Success Together</p>
@@ -1005,3 +990,4 @@
 
 </body>
 </html>
+
