@@ -1,0 +1,65 @@
+/*
+  PeakSales "Summit" design tokens
+  Source: brief.md section 6 + tokens.css from Archive
+  All contrast ratios WCAG 2.x verified (see brief.md 6.3)
+*/
+
+/* ─── Google Fonts ─────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ── Dark surfaces ─────────────────────────────────────── */
+  --ps-ink:         #15110E;   /* hero, process band, footer */
+  --ps-basalt:      #241D18;   /* raised dark surface, cards on ink */
+  --ps-basalt-line: #3A3029;   /* hairlines on dark */
+
+  /* ── Light surfaces ────────────────────────────────────── */
+  --ps-snow:        #F5F6F7;   /* base light surface */
+  --ps-frost:       #E7EAEC;   /* light panels, hairlines on light */
+  --ps-white:       #FFFFFF;   /* cards on snow */
+
+  /* ── Accent (one per screen, used on dark only) ─────────── */
+  --ps-gold:        #D9A441;   /* primary button fill, key figures */
+  --ps-gold-hover:  #E6B556;
+  --ps-bronze:      #8A5A0F;   /* accent text/links on light */
+
+  /* ── Neutrals ───────────────────────────────────────────── */
+  --ps-granite:     #5F5850;   /* secondary text on light */
+  --ps-mist:        #A9A096;   /* secondary text on dark (7.3:1 on ink) */
+  --ps-glacier:     #9DB2BF;   /* icons, chart lines, outlines on dark */
+
+  /* ── Semantic ───────────────────────────────────────────── */
+  --ps-growth:      #2C6B4F;
+  --ps-alert:       #A8321F;
+
+  /* ── Typography ─────────────────────────────────────────── */
+  --ps-font-display: "Bricolage Grotesque", "Noto Sans Tamil", system-ui, sans-serif;
+  --ps-font-body:    "Instrument Sans", "Noto Sans Tamil", system-ui, sans-serif;
+  --ps-font-mono:    "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  /* ── Type scale (clamp) ─────────────────────────────────── */
+  --ps-h1:    clamp(2.5rem, 1.6rem + 3.6vw, 4.25rem);    /* 40→68px */
+  --ps-h2:    clamp(1.875rem, 1.4rem + 1.9vw, 2.75rem);  /* 30→44px */
+  --ps-h3:    clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);    /* 20→24px */
+  --ps-body:  1.0625rem;                                  /* 17px */
+  --ps-small: 0.875rem;                                   /* 14px */
+  --ps-label: 0.75rem;                                    /* 12px, uppercase +0.08em */
+  --ps-stat:  clamp(2.5rem, 2rem + 2vw, 3.75rem);        /* metric figures */
+
+  /* ── Space + shape ──────────────────────────────────────── */
+  --ps-gutter:    clamp(16px, 4vw, 32px);
+  --ps-section:   clamp(64px, 8vw, 112px);
+  --ps-measure:   65ch;
+  --ps-max:       1200px;
+  --ps-radius:    6px;
+  --ps-radius-lg: 10px;
+  --ps-shadow:    0 1px 0 rgba(21,17,14,.06), 0 12px 32px -16px rgba(21,17,14,.25);
+
+  /* ── Motion ─────────────────────────────────────────────── */
+  --ps-ease: cubic-bezier(.2,.7,.2,1);
+  --ps-dur:  240ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --ps-dur: 0ms; }
+}

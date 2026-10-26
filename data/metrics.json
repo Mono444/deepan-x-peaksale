@@ -1,0 +1,69 @@
+{
+  "revenue_closed": {
+    "value": "₹10 Cr+",
+    "as_of": "October 2026",
+    "status": "CONFIRM",
+    "display": true
+  },
+  "clients_served": {
+    "value": "50+",
+    "as_of": "October 2026",
+    "status": "SITE",
+    "display": true
+  },
+  "avg_close_rate": {
+    "value": "35%",
+    "footnote": "of qualified leads, across all models",
+    "as_of": "October 2026",
+    "status": "SITE",
+    "display": true
+  },
+  "go_live": {
+    "value": "5–7 days",
+    "label": "From signed scope to live calls",
+    "status": "SITE",
+    "display": true
+  },
+  "report_cadence": {
+    "value": "Weekly",
+    "display": true
+  },
+  "industries": ["SaaS", "EdTech", "Professional services", "Agencies"],
+  "years_operating": {
+    "value": null,
+    "display": false
+  },
+  "cin": {
+    "value": null,
+    "display": false
+  },
+  "incorporation_date": {
+    "value": null,
+    "display": false
+  },
+  "registered_office": {
+    "value": "Trichy, Tamil Nadu",
+    "display": true
+  },
+  "gstin": {
+    "value": null,
+    "display": false
+  },
+  "email": {
+    "value": null,
+    "display": false
+  },
+  "phone": {
+    "value": null,
+    "display": false
+  },
+  "team_size": {
+    "value": null,
+    "display": false
+  },
+  "open_roles": {
+    "value": null,
+    "display": false
+  },
+  "tagline": "Climbing to Success Together"
+}
