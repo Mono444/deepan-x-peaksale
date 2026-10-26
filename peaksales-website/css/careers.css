@@ -1,0 +1,14 @@
+/* Careers-specific layout tweaks */
+.careers-hero .hero-grid {
+  min-height: 400px;
+}
+
+.careers-hero .hero-portrait-placeholder {
+  aspect-ratio: 3/2;
+}
+
+@media (max-width: 768px) {
+  .leaks-grid.three-col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
