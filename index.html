@@ -3,31 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Primary Meta -->
   <title>PeakSales | Outsourced Sales Execution for Growing Businesses</title>
   <meta name="description" content="PeakSales Private Limited closes your leads fast, follows up until there is a decision, and reports every week. Sales execution for B2B businesses in India.">
   <link rel="canonical" href="https://peaksales.in/">
+  <meta name="theme-color" content="#0B132B">
 
   <!-- OG / Social -->
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://peaksales.in/">
-  <meta property="og:title"       content="PeakSales | Stop the Leaks. Close More of the Leads You Already Have.">
+  <meta property="og:title"       content="PeakSales | Your leads are ready to buy. Someone has to call them.">
   <meta property="og:description" content="PeakSales Private Limited calls your leads fast, follows up until there is a decision, and reports every week.">
-  <meta property="og:image"       content="https://peaksales.in/og-image.jpg">
+  <meta property="og:image"       content="https://peaksales.in/images/og-image.jpg">
   <meta name="twitter:card"       content="summary_large_image">
 
-  <!-- Favicon placeholder -->
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Preload above-fold fonts -->
+  <link rel="preload" href="fonts/cabinet-grotesk-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/satoshi-400.woff2"         as="font" type="font/woff2" crossorigin>
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/main.css">
+
+  <!-- Phosphor Icons (pinned CDN) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
 
   <!-- Cal.com embed -->
   <script type="text/javascript">
@@ -58,7 +59,7 @@
     "name": "PeakSales Private Limited",
     "legalName": "PeakSales Private Limited",
     "url": "https://peaksales.in",
-    "logo": "https://peaksales.in/assets/logo-horizontal.svg",
+    "logo": "https://peaksales.in/assets/logo-white.svg",
     "foundingLocation": { "@type": "Place", "name": "Trichy, Tamil Nadu, India" },
     "sameAs": []
   }
@@ -83,43 +84,35 @@
         "name": "How quickly can you start?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Within 5–7 business days after scope and onboarding are agreed."
+          "text": "Within 5-7 business days after scope and onboarding are agreed."
         }
       }
     ]
   }
   </script>
 </head>
-
 <body>
 
   <!-- Skip link -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- ═══════════════════════════════════════════════════════
-       §5.0  HEADER
-       ═══════════════════════════════════════════════════════ -->
+  <!-- Sentinel for sticky header -->
+  <div id="header-sentinel" style="position:absolute;top:0;height:1px;width:1px;" aria-hidden="true"></div>
+
+  <!-- HEADER -->
   <header class="site-header" id="site-header" role="banner">
     <div class="container header-inner">
-
-      <!-- Logo -->
-      <a href="/" class="header-logo" aria-label="PeakSales - go to homepage" id="header-logo">
-        <img class="header-logo-img" src="images/logo.jpg" alt="PeakSales Logo" width="120" height="40">
+      <a href="/" class="header-logo" aria-label="PeakSales - go to homepage">
+        <img class="header-logo-img" src="assets/logo-white.svg" alt="PeakSales" width="120" height="32" onerror="this.src='images/logo-mark-light.png'">
       </a>
-
-      <!-- Desktop nav -->
       <nav class="header-nav" aria-label="Primary navigation">
         <a href="#services">Services</a>
-        <a href="#results">Results</a>
         <a href="#process">How it works</a>
         <a href="#company">About</a>
         <a href="careers.html" class="careers-link">
-          <span class="careers-dot" aria-hidden="true"></span>
-          Careers
+          <span class="careers-dot" aria-hidden="true"></span>Careers
         </a>
       </nav>
-
-      <!-- Header CTA -->
       <div class="header-cta">
         <button
           class="btn btn-primary"
@@ -128,73 +121,59 @@
           data-cal-namespace="free-sales-consultation-peaksales"
           data-cal-config='{"layout":"month_view"}'
         >
-          Book a discovery call
+          Book a Free Leak Check
         </button>
       </div>
-
-      <!-- Mobile menu button -->
       <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <line x1="3" y1="6" x2="21" y2="6"/>
-          <line x1="3" y1="12" x2="21" y2="12"/>
-          <line x1="3" y1="18" x2="21" y2="18"/>
-        </svg>
+        <i class="ph ph-list" aria-hidden="true" style="font-size:1.5rem;"></i>
       </button>
     </div>
   </header>
 
   <!-- Mobile nav -->
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
-    <a href="#services"  id="mnav-services">Services</a>
-    <a href="#results"   id="mnav-results">Results</a>
-    <a href="#process"   id="mnav-process">How it works</a>
-    <a href="#company"   id="mnav-company">About</a>
-    <a href="careers.html" id="mnav-careers">Careers</a>
+    <a href="#services">Services</a>
+    <a href="#process">How it works</a>
+    <a href="#company">About</a>
+    <a href="careers.html">Careers</a>
     <button
       class="btn btn-primary"
       id="mobile-book-btn"
       data-cal-link="peaksales-qsfd88/free-sales-consultation-peaksales"
       data-cal-namespace="free-sales-consultation-peaksales"
       data-cal-config='{"layout":"month_view"}'
+      style="justify-content:center;"
     >
-      Book a discovery call
+      Book a Free Leak Check
     </button>
   </nav>
 
-  <!-- ═══════════════════════════════════════════════════════
-       MAIN CONTENT
-       ═══════════════════════════════════════════════════════ -->
   <main id="main-content">
 
-    <!-- ─────────────────────────────────────────────────────
-         §5.1  HERO
-         ───────────────────────────────────────────────────── -->
+    <!-- ═══════════════════════════════════════════════════
+         6.1 HERO (ink – Act 1)
+         ═══════════════════════════════════════════════════ -->
     <section class="hero" id="hero" aria-labelledby="hero-heading">
-      <!-- Contour line motif -->
+      <!-- Contour pattern -->
       <div class="contour-bg" aria-hidden="true">
         <svg viewBox="0 0 1200 720" preserveAspectRatio="xMidYMid slice">
-          <ellipse cx="700" cy="360" rx="480" ry="300" fill="none" stroke="#9DB2BF" stroke-width="1"/>
-          <ellipse cx="700" cy="360" rx="380" ry="230" fill="none" stroke="#9DB2BF" stroke-width="1"/>
-          <ellipse cx="700" cy="360" rx="280" ry="165" fill="none" stroke="#9DB2BF" stroke-width="1"/>
-          <ellipse cx="700" cy="360" rx="185" ry="110" fill="none" stroke="#9DB2BF" stroke-width="1"/>
-          <ellipse cx="700" cy="360" rx="95"  ry="60"  fill="none" stroke="#9DB2BF" stroke-width="1"/>
+          <ellipse cx="850" cy="360" rx="440" ry="280" fill="none" stroke="#AAB6CC" stroke-width="1"/>
+          <ellipse cx="850" cy="360" rx="320" ry="200" fill="none" stroke="#AAB6CC" stroke-width="1"/>
+          <ellipse cx="850" cy="360" rx="200" ry="130" fill="none" stroke="#AAB6CC" stroke-width="1"/>
+          <ellipse cx="850" cy="360" rx="100" ry="70"  fill="none" stroke="#AAB6CC" stroke-width="1"/>
         </svg>
       </div>
 
       <div class="container">
         <div class="hero-grid">
 
-          <!-- Left column -->
+          <!-- Left -->
           <div class="hero-left">
-            <p class="hero-eyebrow" id="hero-eyebrow">
-              PeakSales Private Limited · Sales execution for growing businesses
-            </p>
+            <p class="hero-eyebrow">For businesses with more leads than closers</p>
             <h1 id="hero-heading">
-              Stop the leaks. Close more of the leads you already have.
+              Your leads are <span class="highlight">ready to buy</span>. Someone has to call them.
             </h1>
-            <p class="hero-sub">
-              PeakSales calls your leads fast, follows up until there is a decision, and reports every week. Run your whole sales engine through us, hire a dedicated team, or fix the one you have.
-            </p>
+            <p class="hero-sub">We call every lead fast, follow up until they decide, and show you every call in a weekly report.</p>
             <div class="hero-actions">
               <button
                 class="btn btn-primary"
@@ -203,20 +182,59 @@
                 data-cal-namespace="free-sales-consultation-peaksales"
                 data-cal-config='{"layout":"month_view"}'
               >
-                Book a discovery call
+                Book a Free Leak Check
               </button>
               <a href="careers.html" class="text-link" id="hero-careers-link">
-                Looking for a sales career? See open roles →
+                Hiring? See Open Roles <i class="ph ph-arrow-right" aria-hidden="true"></i>
               </a>
             </div>
-            <p class="hero-micro">Free · 30 minutes · No obligation</p>
           </div>
 
-          <!-- Right column – portrait -->
-          <div class="hero-portrait">
-            <img class="hero-portrait-img" src="images/deepan-raj.jpg" alt="Deepan Raj, Founder &amp; CEO of PeakSales" width="400" height="533" loading="eager">
-            <div class="hero-caption-card" aria-hidden="true">
-              Deepan Raj · Founder &amp; CEO
+          <!-- Right: lead feed -->
+          <div class="lead-feed-card" role="img" aria-label="Sample lead feed showing today's activity">
+            <div class="lead-feed-header">
+              <span class="lead-feed-title">Today's leads</span>
+              <span class="chip chip--ink">Sample</span>
+            </div>
+
+            <div class="feed-event" id="feed-1">
+              <div class="feed-icon">
+                <i class="ph ph-tray-arrow-down" aria-hidden="true" style="font-size:1.1rem;"></i>
+              </div>
+              <div class="feed-event-text">
+                <div class="feed-event-title">New enquiry received</div>
+                <div class="feed-event-sub">Website form</div>
+              </div>
+            </div>
+
+            <div class="feed-event" id="feed-2">
+              <div class="feed-icon">
+                <i class="ph ph-phone-call" aria-hidden="true" style="font-size:1.1rem;"></i>
+              </div>
+              <div class="feed-event-text">
+                <div class="feed-event-title">Called and qualified</div>
+                <div class="feed-event-sub">Interested, wants pricing</div>
+              </div>
+            </div>
+
+            <div class="feed-event" id="feed-3">
+              <div class="feed-icon">
+                <i class="ph ph-arrows-clockwise" aria-hidden="true" style="font-size:1.1rem;"></i>
+              </div>
+              <div class="feed-event-text">
+                <div class="feed-event-title">Follow-up 3 done</div>
+                <div class="feed-event-sub">Demo booked</div>
+              </div>
+            </div>
+
+            <div class="feed-event" id="feed-4">
+              <div class="feed-icon feed-icon--accent">
+                <i class="ph ph-check-circle" aria-hidden="true" style="font-size:1.1rem;"></i>
+              </div>
+              <div class="feed-event-text">
+                <div class="feed-event-title">Deal closed</div>
+                <div class="feed-event-sub">Payment collected</div>
+              </div>
             </div>
           </div>
 
@@ -224,384 +242,479 @@
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────────────────────
-         §5.2  PROOF STRIP
-         ───────────────────────────────────────────────────── -->
-    <section class="proof-strip" aria-labelledby="proof-heading" id="proof">
+    <!-- ═══════════════════════════════════════════════════
+         6.2 PROOF BAR (ink – Act 1 continues)
+         ═══════════════════════════════════════════════════ -->
+    <section class="proof-strip" id="proof" aria-label="Key metrics">
       <div class="container">
         <div class="proof-tiles" role="list">
 
-          <!-- Tile 1: Revenue closed -->
           <div class="proof-tile" role="listitem">
-            <div class="proof-stat" aria-label="Ten crore rupees plus">₹10 Cr+</div>
+            <div class="proof-stat" aria-label="Ten crore rupees plus">&#8377;10 Cr+</div>
             <div class="proof-label">Client revenue closed</div>
             <div class="proof-footnote">As of October 2026</div>
           </div>
 
-          <!-- Tile 2: Clients served -->
           <div class="proof-tile" role="listitem">
             <div class="proof-stat">50+</div>
             <div class="proof-label">Businesses served</div>
             <div class="proof-footnote">All-time</div>
           </div>
 
-          <!-- Tile 3: Close rate -->
           <div class="proof-tile" role="listitem">
             <div class="proof-stat">35%</div>
             <div class="proof-label">Average close rate</div>
-            <div class="proof-footnote">Of qualified leads across all models</div>
+            <div class="proof-footnote">Of qualified leads</div>
           </div>
 
-          <!-- Tile 4: Go-live time -->
           <div class="proof-tile" role="listitem">
-            <div class="proof-stat">5–7</div>
-            <div class="proof-label">Days from scope to live calls</div>
-            <div class="proof-footnote">After onboarding is complete</div>
+            <div class="proof-stat">5-7 days</div>
+            <div class="proof-label">From scope to live calls</div>
+            <div class="proof-footnote">After onboarding</div>
           </div>
 
         </div>
-
-        <!-- Company identity line -->
-        <p class="proof-identity" aria-label="Company identity">
-          PeakSales Private Limited · Trichy, Tamil Nadu
-        </p>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────────────────────
-         §5.3  WHERE REVENUE LEAKS
-         ───────────────────────────────────────────────────── -->
-    <section class="section leaks" id="leaks" aria-labelledby="leaks-heading">
+    <!-- ═══════════════════════════════════════════════════
+         6.3 REVENUE LEAKS + LEAK CHECK (ink – end of Act 1)
+         ═══════════════════════════════════════════════════ -->
+    <section class="leaks-section section" id="leaks" aria-labelledby="leaks-heading">
       <div class="container">
-        <p class="section-label section-label--light">The problem</p>
+        <p class="section-eyebrow">The problem</p>
         <h2 id="leaks-heading">Revenue leaks after the lead arrives.</h2>
 
-        <div class="leaks-grid">
-
-          <article class="leak-card" id="leak-slow-response">
-            <div class="leak-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
+        <!-- Lead journey line -->
+        <div class="lead-journey" role="img" aria-label="Lead journey from arrival to closed deal with four common leak points">
+          <div class="journey-point">
+            <div class="journey-icon-wrap">
+              <i class="ph ph-tray-arrow-down" aria-hidden="true"></i>
             </div>
-            <h3>Slow response</h3>
-            <p>A lead that waits goes cold. We reach out the moment it lands.</p>
-          </article>
-
-          <article class="leak-card" id="leak-missed-followup">
-            <div class="leak-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 12h18M3 6h18M3 18h12"/>
-              </svg>
-            </div>
-            <h3>Missed follow-up</h3>
-            <p>One call is not a process. We keep a set cadence until the lead decides.</p>
-          </article>
-
-          <article class="leak-card" id="leak-generic-pitch">
-            <div class="leak-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-              </svg>
-            </div>
-            <h3>Generic pitch</h3>
-            <p>Every prospect hears a script written for someone else. We tailor the pitch to their situation.</p>
-          </article>
-
-          <article class="leak-card" id="leak-no-numbers">
-            <div class="leak-icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="18" y1="20" x2="18" y2="10"/>
-                <line x1="12" y1="20" x2="12" y2="4"/>
-                <line x1="6"  y1="20" x2="6"  y2="14"/>
-              </svg>
-            </div>
-            <h3>No numbers</h3>
-            <p>If you cannot see calls, follow-ups and conversions, you cannot fix them. You get a report every week.</p>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ─────────────────────────────────────────────────────
-         §5.4  THREE WAYS TO WORK WITH US
-         ───────────────────────────────────────────────────── -->
-    <section class="section services" id="services" aria-labelledby="services-heading">
-      <div class="container">
-        <h2 id="services-heading">Three ways to work with us.</h2>
-        <p class="services-intro">Pick the one that matches where your sales are today.</p>
-
-        <div class="services-grid">
-
-          <!-- Full-Service Growth -->
-          <article class="service-card" id="service-full-growth">
-            <h3>Full-Service Growth</h3>
-            <p class="service-best-for">Best for: businesses that want marketing and sales run as one system</p>
-            <ul class="service-bullets" aria-label="What is included">
-              <li>Organic and paid marketing: content, ads, lead generation</li>
-              <li>Funnel design and optimisation, end to end</li>
-              <li>A dedicated calling and closing team</li>
-              <li>Full reporting on spend, leads and revenue</li>
-            </ul>
-            <div class="service-pay-box">
-              <div class="service-pay-label">How you pay</div>
-              <div class="service-pay-text">Monthly retainer + performance share on revenue</div>
-            </div>
-            <button
-              class="service-link"
-              id="service-fullgrowth-cta"
-              data-cal-link="peaksales-qsfd88/free-sales-consultation-peaksales"
-              data-cal-namespace="free-sales-consultation-peaksales"
-              data-cal-config='{"layout":"month_view"}'
-            >
-              Talk to us about this →
-            </button>
-          </article>
-
-          <!-- Dedicated Sales Team -->
-          <article class="service-card" id="service-dedicated-team">
-            <h3>Dedicated Sales Team</h3>
-            <p class="service-best-for">Best for: businesses with leads but nobody to close them</p>
-            <ul class="service-bullets" aria-label="What is included">
-              <li>We source and hire the right reps for your business</li>
-              <li>Training, scripts and day-to-day management by us</li>
-              <li>The team works only as your sales force</li>
-              <li>Weekly performance reporting</li>
-            </ul>
-            <div class="service-pay-box">
-              <div class="service-pay-label">How you pay</div>
-              <div class="service-pay-text">Base retainer + commission, paid only on closed, collected revenue</div>
-            </div>
-            <button
-              class="service-link"
-              id="service-dedicatedteam-cta"
-              data-cal-link="peaksales-qsfd88/free-sales-consultation-peaksales"
-              data-cal-namespace="free-sales-consultation-peaksales"
-              data-cal-config='{"layout":"month_view"}'
-            >
-              Talk to us about this →
-            </button>
-          </article>
-
-          <!-- Sales Team Optimisation -->
-          <article class="service-card" id="service-optimisation">
-            <h3>Sales Team Optimisation</h3>
-            <p class="service-best-for">Best for: businesses whose reps are underperforming</p>
-            <ul class="service-bullets" aria-label="What is included">
-              <li>Full sales-funnel audit and leak analysis</li>
-              <li>Hands-on training and script development</li>
-              <li>Fixes for drop-off in the lead funnel</li>
-              <li>KPIs and systems that keep conversion up</li>
-            </ul>
-            <div class="service-pay-box">
-              <div class="service-pay-label">How you pay</div>
-              <div class="service-pay-text">Fixed-fee project or ongoing retainer, KPIs agreed upfront</div>
-            </div>
-            <button
-              class="service-link"
-              id="service-optimisation-cta"
-              data-cal-link="peaksales-qsfd88/free-sales-consultation-peaksales"
-              data-cal-namespace="free-sales-consultation-peaksales"
-              data-cal-config='{"layout":"month_view"}'
-            >
-              Talk to us about this →
-            </button>
-          </article>
-
-        </div>
-
-        <!-- Common thread strip -->
-        <p class="services-thread">
-          In all three, we act as your sales business analyst: we map your funnel, find where leads and revenue are lost, and fix it.
-        </p>
-      </div>
-    </section>
-
-    <!-- ─────────────────────────────────────────────────────
-         §5.5  PROCESS
-         ───────────────────────────────────────────────────── -->
-    <section class="section process" id="process" aria-labelledby="process-heading">
-      <div class="container">
-        <p class="section-label">How it works</p>
-        <h2 id="process-heading">How a lead becomes a closed deal.</h2>
-
-        <!-- Ridge SVG -->
-        <div class="process-ridge-wrap" aria-hidden="true">
-          <svg class="ridge-svg" id="ridge-svg" viewBox="0 0 1000 120" preserveAspectRatio="xMidYMid meet">
-            <!-- Ascending ridge polyline through 5 peaks -->
-            <polyline
-              class="ridge-path"
-              id="ridge-path"
-              points="0,100 100,100 200,60 300,100 400,45 500,100 600,30 700,100 800,15 900,100 1000,100"
-            />
-            <!-- Peak 1 -->
-            <g class="ridge-peak-group" tabindex="0" role="img" aria-label="Step 1: Lead allocation">
-              <circle class="ridge-dot" cx="200" cy="60" r="5"/>
-            </g>
-            <!-- Peak 2 -->
-            <g class="ridge-peak-group" tabindex="0" role="img" aria-label="Step 2: Immediate response">
-              <circle class="ridge-dot" cx="400" cy="45" r="5"/>
-            </g>
-            <!-- Peak 3 -->
-            <g class="ridge-peak-group" tabindex="0" role="img" aria-label="Step 3: Structured follow-up">
-              <circle class="ridge-dot" cx="600" cy="30" r="5"/>
-            </g>
-            <!-- Peak 4 -->
-            <g class="ridge-peak-group" tabindex="0" role="img" aria-label="Step 4: Pitch customisation">
-              <circle class="ridge-dot" cx="800" cy="15" r="5"/>
-            </g>
-            <!-- Peak 5 (summit) -->
-            <g class="ridge-peak-group" tabindex="0" role="img" aria-label="Step 5: Closing and payment">
-              <circle class="ridge-dot" cx="900" cy="100" r="5" style="fill:var(--ps-gold);stroke:var(--ps-gold)"/>
-            </g>
-          </svg>
-        </div>
-
-        <!-- Steps -->
-        <ol class="process-steps" aria-label="5-step sales process">
-          <li class="process-step" id="process-step-1">
-            <div class="process-step-num">01</div>
-            <h3>Lead allocation</h3>
-            <p>Leads are received, segmented and prioritised.</p>
-          </li>
-          <li class="process-step" id="process-step-2">
-            <div class="process-step-num">02</div>
-            <h3>Immediate response</h3>
-            <p>Fast outreach while interest is high.</p>
-          </li>
-          <li class="process-step" id="process-step-3">
-            <div class="process-step-num">03</div>
-            <h3>Structured follow-up</h3>
-            <p>Consistent touchpoints with every prospect.</p>
-          </li>
-          <li class="process-step" id="process-step-4">
-            <div class="process-step-num">04</div>
-            <h3>Pitch customisation</h3>
-            <p>Messaging matched to each prospect's need.</p>
-          </li>
-          <li class="process-step" id="process-step-5">
-            <div class="process-step-num">05</div>
-            <h3>Closing and payment</h3>
-            <p>Guided support through decision, contract and payment.</p>
-          </li>
-        </ol>
-
-        <!-- Start strip -->
-        <div class="process-start" aria-label="How to get started in 3 steps">
-          <div class="process-start-step" id="start-step-1">
-            <div class="process-start-num">1 — Connect</div>
-            <h4>Book a discovery call</h4>
-            <p>A 30-minute call about your business, leads and targets.</p>
+            <div class="journey-point-title">Slow response</div>
+            <div class="journey-point-desc">A lead that waits goes cold. We reach out the moment it lands.</div>
           </div>
-          <div class="process-start-step" id="start-step-2">
-            <div class="process-start-num">2 — Plan</div>
-            <h4>Get your execution plan</h4>
-            <p>We draft your sales plan: team size, calling cadence, scripts and KPIs.</p>
+          <div class="journey-point">
+            <div class="journey-icon-wrap">
+              <i class="ph ph-list-dashes" aria-hidden="true"></i>
+            </div>
+            <div class="journey-point-title">Missed follow-up</div>
+            <div class="journey-point-desc">One call is not a process. We keep a set cadence until the lead decides.</div>
           </div>
-          <div class="process-start-step" id="start-step-3">
-            <div class="process-start-num">3 — Go live</div>
-            <h4>Calls start in 5–7 days</h4>
-            <p>Live calls on your leads within 5–7 business days of onboarding.</p>
+          <div class="journey-point">
+            <div class="journey-icon-wrap">
+              <i class="ph ph-chat-dots" aria-hidden="true"></i>
+            </div>
+            <div class="journey-point-title">Generic pitch</div>
+            <div class="journey-point-desc">Every prospect hears a script written for someone else. We tailor the pitch.</div>
+          </div>
+          <div class="journey-point">
+            <div class="journey-icon-wrap">
+              <i class="ph ph-chart-bar" aria-hidden="true"></i>
+            </div>
+            <div class="journey-point-title">No numbers</div>
+            <div class="journey-point-desc">If you cannot see calls and conversions, you cannot fix them.</div>
+          </div>
+          <div class="journey-point">
+            <div class="journey-icon-wrap" style="background:var(--accent-on-ink);color:var(--ink);">
+              <i class="ph ph-check-circle" aria-hidden="true"></i>
+            </div>
+            <div class="journey-point-title">Deal closed</div>
+            <div class="journey-point-desc"></div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ─────────────────────────────────────────────────────
-         §5.6  RESULTS (placeholder – no verified case studies yet)
-         ───────────────────────────────────────────────────── -->
-    <section class="section results" id="results" aria-labelledby="results-heading">
-      <div class="container">
-        <h2 id="results-heading">Results.</h2>
-        <p class="results-note">Case studies are published only with the named client's written consent.</p>
-        <div class="results-placeholder" role="status">
-          <p>Verified case studies are being prepared for publication. In the meantime, book a call — we will walk you through real client outcomes on the call.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ─────────────────────────────────────────────────────
-         §5.7  WHAT YOU SEE EVERY WEEK
-         ───────────────────────────────────────────────────── -->
-    <section class="section reporting" id="reporting" aria-labelledby="reporting-heading">
-      <div class="container">
-        <div class="reporting-grid">
-
-          <div class="reporting-left">
-            <p class="section-label section-label--light">Reporting</p>
-            <h2 id="reporting-heading">You see every call. Every week.</h2>
-            <p class="reporting-body">
-              Each week you get a report on call volume, follow-ups, lead status, conversion rate and pipeline health. You always know where things stand.
-            </p>
-            <div class="reporting-items">
-              <div class="reporting-item"><div class="reporting-item-dot" aria-hidden="true"></div>Call volume</div>
-              <div class="reporting-item"><div class="reporting-item-dot" aria-hidden="true"></div>Follow-up activity</div>
-              <div class="reporting-item"><div class="reporting-item-dot" aria-hidden="true"></div>Lead status</div>
-              <div class="reporting-item"><div class="reporting-item-dot" aria-hidden="true"></div>Conversion rate</div>
-              <div class="reporting-item"><div class="reporting-item-dot" aria-hidden="true"></div>Pipeline health</div>
-            </div>
-          </div>
-
-          <!-- Sample report card -->
-          <div class="reporting-right">
-            <div class="sample-card" role="img" aria-label="Sample weekly report – illustrative figures, not a client result">
-              <div class="sample-tag">SAMPLE REPORT · Illustrative figures, not a client result</div>
-              <div class="sample-header">
-                Weekly Sales Report
-                <span class="sample-week">Week of 20 Oct 2026</span>
-              </div>
-              <div class="sample-rows">
-                <div class="sample-row">
-                  <span class="sample-row-label">Leads assigned</span>
-                  <span class="sample-row-value">48</span>
-                </div>
-                <div class="sample-row">
-                  <span class="sample-row-label">Calls made</span>
-                  <span class="sample-row-value">142</span>
-                </div>
-                <div class="sample-row">
-                  <span class="sample-row-label">Follow-ups completed</span>
-                  <span class="sample-row-value">87</span>
-                </div>
-                <div class="sample-row">
-                  <span class="sample-row-label">Deals closed</span>
-                  <span class="sample-row-value positive">17</span>
-                </div>
-                <div class="sample-row">
-                  <span class="sample-row-label">Close rate (this week)</span>
-                  <span class="sample-row-value positive">35%</span>
-                </div>
-                <div class="sample-row">
-                  <span class="sample-row-label">Pipeline value</span>
-                  <span class="sample-row-value">₹9.4 L</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ─────────────────────────────────────────────────────
-         §5.8  HOW WE GET PAID / WHO WE FIT
-         ───────────────────────────────────────────────────── -->
-    <section class="section alignment" id="alignment" aria-labelledby="alignment-heading">
-      <div class="container">
-        <div class="alignment-grid">
-
+        <!-- 60-second leak check -->
+        <div class="leak-check-card" aria-labelledby="leak-check-heading">
           <div>
-            <h2 id="alignment-heading">We earn more when you do.</h2>
-            <p class="alignment-body">
-              On the Dedicated Sales Team model you pay a base retainer, and we earn commission only on revenue that is closed and collected. Scope, KPIs and pricing are agreed before work starts. There are no surprises.
+            <h3 id="leak-check-heading" class="leak-check-heading">Tick what happens in your business.</h3>
+            <form class="leak-items" id="leak-check-form" aria-label="Leak check questionnaire">
+              <!-- Honeypot -->
+              <input type="text" name="company_website" tabindex="-1" style="position:absolute;left:-9999px;width:1px;height:1px;" aria-hidden="true" autocomplete="off">
+
+              <label class="leak-item" for="leak-1">
+                <input type="checkbox" id="leak-1" name="leak" value="1">
+                <span>New leads wait hours before anyone calls them.</span>
+              </label>
+              <label class="leak-item" for="leak-2">
+                <input type="checkbox" id="leak-2" name="leak" value="2">
+                <span>If a lead does not pick up, nobody calls again.</span>
+              </label>
+              <label class="leak-item" for="leak-3">
+                <input type="checkbox" id="leak-3" name="leak" value="3">
+                <span>Follow-ups live in someone's head or a WhatsApp chat.</span>
+              </label>
+              <label class="leak-item" for="leak-4">
+                <input type="checkbox" id="leak-4" name="leak" value="4">
+                <span>Every prospect hears the same pitch.</span>
+              </label>
+              <label class="leak-item" for="leak-5">
+                <input type="checkbox" id="leak-5" name="leak" value="5">
+                <span>You cannot say how many calls were made last week.</span>
+              </label>
+              <label class="leak-item" for="leak-6">
+                <input type="checkbox" id="leak-6" name="leak" value="6">
+                <span>You spend on ads but cannot tell which leads became sales.</span>
+              </label>
+            </form>
+          </div>
+          <div class="leak-result-col">
+            <div>
+              <div class="leak-counter" id="leak-counter" aria-live="polite" aria-atomic="true">0</div>
+              <div class="leak-counter-label">of 6 ticked</div>
+            </div>
+            <p class="leak-result-text" id="leak-result-text" aria-live="polite">
+              Your process is tight. A call can still find the small leaks.
             </p>
+            <button
+              class="btn btn-primary"
+              id="leak-cta-btn"
+              data-cal-link="peaksales-qsfd88/free-sales-consultation-peaksales"
+              data-cal-namespace="free-sales-consultation-peaksales"
+              data-cal-config='{"layout":"month_view"}'
+            >
+              Book a Free Leak Check
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Act 1 -> Act 2 transition -->
+    <div class="act-transition" aria-hidden="true"></div>
+
+    <!-- ═══════════════════════════════════════════════════
+         6.4 WHAT CHANGES (paper – Act 2)
+         ═══════════════════════════════════════════════════ -->
+    <section class="comparison-section section" id="comparison" aria-labelledby="comparison-heading">
+      <div class="container">
+        <h2 id="comparison-heading">What changes when PeakSales takes the calls.</h2>
+        <div class="comparison-table" role="table" aria-label="Before and after comparison">
+          <div class="comparison-header" role="row">
+            <div class="comparison-col-head" role="columnheader">
+              <i class="ph ph-x-circle" aria-hidden="true"></i>
+              Without a system
+            </div>
+            <div class="comparison-col-head" role="columnheader">
+              <i class="ph ph-check-circle" aria-hidden="true"></i>
+              With PeakSales
+            </div>
+          </div>
+          <div class="comparison-row" role="row">
+            <div class="comparison-cell" role="cell">
+              <span class="moment">A lead arrives</span>
+              It waits in a sheet until someone is free.
+            </div>
+            <div class="comparison-cell" role="cell">
+              <span class="moment">A lead arrives</span>
+              We call while interest is high.
+            </div>
+          </div>
+          <div class="comparison-row" role="row">
+            <div class="comparison-cell" role="cell">
+              <span class="moment">The lead does not answer</span>
+              One missed call and it is forgotten.
+            </div>
+            <div class="comparison-cell" role="cell">
+              <span class="moment">The lead does not answer</span>
+              It goes into a set follow-up cadence until there is a decision.
+            </div>
+          </div>
+          <div class="comparison-row" role="row">
+            <div class="comparison-cell" role="cell">
+              <span class="moment">The pitch</span>
+              The same script for everyone.
+            </div>
+            <div class="comparison-cell" role="cell">
+              <span class="moment">The pitch</span>
+              A pitch built around what this prospect asked about.
+            </div>
+          </div>
+          <div class="comparison-row" role="row">
+            <div class="comparison-cell" role="cell">
+              <span class="moment">Monday morning</span>
+              You guess how last week went.
+            </div>
+            <div class="comparison-cell" role="cell">
+              <span class="moment">Monday morning</span>
+              You read it in your weekly report.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         6.5 HOW A LEAD BECOMES A CLOSED DEAL (paper)
+         ═══════════════════════════════════════════════════ -->
+    <section class="process-section" id="process" aria-labelledby="process-heading">
+      <div class="container">
+        <div class="process-layout">
+          <!-- Left sticky -->
+          <div class="process-sticky">
+            <p class="section-eyebrow section-eyebrow--paper">How it works</p>
+            <h2 id="process-heading">How a lead becomes a closed deal.</h2>
+            <p class="process-sub">Five steps, the same for every lead, every day.</p>
+            <a href="#book" class="text-link text-link--paper" id="process-cta">
+              Book a Free Leak Check <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </a>
           </div>
 
+          <!-- Right: stepper -->
+          <div class="stepper" id="stepper" aria-label="5-step sales process">
+            <div class="stepper-line" id="stepper-line"></div>
+
+            <div class="step" id="process-step-1">
+              <div class="step-dot" aria-hidden="true">01</div>
+              <div class="step-title">Lead allocation.</div>
+              <div class="step-body">Leads are received, segmented and prioritised.</div>
+              <div class="step-see">What you see: every lead logged with its source.</div>
+            </div>
+
+            <div class="step" id="process-step-2">
+              <div class="step-dot" aria-hidden="true">02</div>
+              <div class="step-title">Immediate response.</div>
+              <div class="step-body">Fast outreach while interest is high.</div>
+              <div class="step-see">What you see: when each lead was first called.</div>
+            </div>
+
+            <div class="step" id="process-step-3">
+              <div class="step-dot" aria-hidden="true">03</div>
+              <div class="step-title">Structured follow-up.</div>
+              <div class="step-body">Consistent touchpoints with every prospect until they decide.</div>
+              <div class="step-see">What you see: follow-ups done per lead.</div>
+            </div>
+
+            <div class="step" id="process-step-4">
+              <div class="step-dot" aria-hidden="true">04</div>
+              <div class="step-title">Pitch customisation.</div>
+              <div class="step-body">Messaging matched to each prospect's need.</div>
+              <div class="step-see">What you see: the objections we heard.</div>
+            </div>
+
+            <div class="step" id="process-step-5">
+              <div class="step-dot" title="Summit" aria-hidden="true">
+                <i class="ph ph-mountains" style="font-size:.9rem;"></i>
+              </div>
+              <div class="step-title">Closing and payment.</div>
+              <div class="step-body">Guided support through decision, contract and payment.</div>
+              <div class="step-see">What you see: deals closed and money collected.</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         6.6 WEEKLY REPORTING (paper)
+         ═══════════════════════════════════════════════════ -->
+    <section class="reporting-section section" id="reporting" aria-labelledby="reporting-heading">
+      <div class="container">
+        <div class="reporting-layout">
+
+          <!-- Left: report card -->
+          <div>
+            <div class="report-card" role="img" aria-label="Sample weekly sales report - illustrative figures, not a client result">
+              <div class="report-card-header">
+                <div>
+                  <div class="report-card-title">Weekly sales report</div>
+                  <div class="report-week">Week of 20 Oct 2026</div>
+                </div>
+                <span class="chip chip--ink">Sample</span>
+              </div>
+              <div class="report-metrics">
+                <div class="report-metric">
+                  <div class="report-metric-label">Leads assigned</div>
+                  <div class="report-metric-value">48</div>
+                </div>
+                <div class="report-metric">
+                  <div class="report-metric-label">Calls made</div>
+                  <div class="report-metric-value">142</div>
+                </div>
+                <div class="report-metric">
+                  <div class="report-metric-label">Follow-ups done</div>
+                  <div class="report-metric-value">87</div>
+                </div>
+                <div class="report-metric">
+                  <div class="report-metric-label">Deals closed</div>
+                  <div class="report-metric-value positive">17</div>
+                </div>
+                <div class="report-metric">
+                  <div class="report-metric-label">Close rate</div>
+                  <div class="report-metric-value positive">35%</div>
+                </div>
+                <div class="report-metric">
+                  <div class="report-metric-label">Pipeline value</div>
+                  <div class="report-metric-value">&#8377;9.4 L</div>
+                </div>
+              </div>
+              <div class="lead-status-title">Lead status</div>
+              <div class="lead-status-row">
+                <span class="lead-status-id">LD-001</span>
+                <span class="lead-status-stage">Contacted</span>
+              </div>
+              <div class="lead-status-row">
+                <span class="lead-status-id">LD-002</span>
+                <span class="lead-status-stage">Follow-up 2</span>
+              </div>
+              <div class="lead-status-row">
+                <span class="lead-status-id">LD-003</span>
+                <span class="lead-status-stage">Qualified</span>
+              </div>
+              <div class="lead-status-row">
+                <span class="lead-status-id">LD-004</span>
+                <span class="lead-status-stage">Demo booked</span>
+              </div>
+              <div class="lead-status-row">
+                <span class="lead-status-id">LD-005</span>
+                <span class="lead-status-stage">Closed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: text -->
+          <div class="reporting-text">
+            <h2 id="reporting-heading">You see every call. Every week.</h2>
+            <div class="reporting-when-where" style="margin-top:1.5rem;">
+              <div class="rww-item">
+                <div class="rww-label">What</div>
+                <div class="rww-value">Calls made, follow-ups done, every lead's status, deals closed, close rate and pipeline value.</div>
+              </div>
+              <!-- When, Where, Who shown only when confirmed -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         6.7 SERVICE MODEL SELECTOR (paper)
+         ═══════════════════════════════════════════════════ -->
+    <section class="services-section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 id="services-heading">Pick how we work together.</h2>
+        <p style="color:var(--text-muted);margin-top:.5rem;">Start from where your sales are today.</p>
+
+        <!-- Tabs -->
+        <div class="services-tabs" role="tablist" aria-label="Service model selector">
+          <button class="service-tab" role="tab" id="tab-dedicated"   aria-selected="true"  aria-controls="service-dedicated-team">I have leads, but no one to close them</button>
+          <button class="service-tab" role="tab" id="tab-full"        aria-selected="false" aria-controls="service-full-growth">I need leads and closers</button>
+          <button class="service-tab" role="tab" id="tab-opt"         aria-selected="false" aria-controls="service-optimisation">My sales team is underperforming</button>
+        </div>
+
+        <!-- Panel: Dedicated Sales Team -->
+        <div class="service-panel" id="service-dedicated-team" role="tabpanel" aria-labelledby="tab-dedicated" aria-hidden="false">
+          <div class="service-panel-inner">
+            <div>
+              <div class="service-name">Dedicated Sales Team</div>
+              <div class="service-best-for">Best for: businesses with leads but nobody to close them</div>
+              <ul class="service-bullets" aria-label="What is included">
+                <li>We source and hire the right reps for your business</li>
+                <li>Training, scripts and day-to-day management by us</li>
+                <li>The team works only as your sales force</li>
+                <li>Weekly performance reporting</li>
+              </ul>
+              <div class="service-pay-box">
+                <div class="service-pay-label">How you pay</div>
+                <div class="service-pay-text">Base retainer + commission, paid only on closed, collected revenue</div>
+              </div>
+            </div>
+            <div class="service-panel-cta">
+              <p style="color:var(--text-muted);font-size:.875rem;">Not sure which model fits? We will tell you on the call.</p>
+              <button
+                class="btn btn-primary--paper btn"
+                data-cal-link="peaksales-qsfd88/free-sales-consultation-peaksales"
+                data-cal-namespace="free-sales-consultation-peaksales"
+                data-cal-config='{"layout":"month_view"}'
+              >
+                Book a Free Leak Check
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: Full-Service Growth -->
+        <div class="service-panel" id="service-full-growth" role="tabpanel" aria-labelledby="tab-full" aria-hidden="true">
+          <div class="service-panel-inner">
+            <div>
+              <div class="service-name">Full-Service Growth</div>
+              <div class="service-best-for">Best for: businesses that want marketing and sales run as one system</div>
+              <ul class="service-bullets" aria-label="What is included">
+                <li>Organic and paid marketing: content, ads, lead generation</li>
+                <li>Funnel design and optimisation, end to end</li>
+                <li>A dedicated calling and closing team</li>
+                <li>Full reporting on spend, leads and revenue</li>
+              </ul>
+              <div class="service-pay-box">
+                <div class="service-pay-label">How you pay</div>
+                <div class="service-pay-text">Monthly retainer + performance share on revenue</div>
+              </div>
+            </div>
+            <div class="service-panel-cta">
+              <p style="color:var(--text-muted);font-size:.875rem;">Not sure which model fits? We will tell you on the call.</p>
+              <button
+                class="btn btn-primary--paper btn"
+                data-cal-link="peaksales-qsfd88/free-sales-consultation-peaksales"
+                data-cal-namespace="free-sales-consultation-peaksales"
+                data-cal-config='{"layout":"month_view"}'
+              >
+                Book a Free Leak Check
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Panel: Sales Team Optimisation -->
+        <div class="service-panel" id="service-optimisation" role="tabpanel" aria-labelledby="tab-opt" aria-hidden="true">
+          <div class="service-panel-inner">
+            <div>
+              <div class="service-name">Sales Team Optimisation</div>
+              <div class="service-best-for">Best for: businesses whose reps are underperforming</div>
+              <ul class="service-bullets" aria-label="What is included">
+                <li>Full sales-funnel audit and leak analysis</li>
+                <li>Hands-on training and script development</li>
+                <li>Fixes for drop-off in the lead funnel</li>
+                <li>KPIs and systems that keep conversion up</li>
+              </ul>
+              <div class="service-pay-box">
+                <div class="service-pay-label">How you pay</div>
+                <div class="service-pay-text">Fixed-fee project or ongoing retainer, KPIs agreed upfront</div>
+              </div>
+            </div>
+            <div class="service-panel-cta">
+              <p style="color:var(--text-muted);font-size:.875rem;">Not sure which model fits? We will tell you on the call.</p>
+              <button
+                class="btn btn-primary--paper btn"
+                data-cal-link="peaksales-qsfd88/free-sales-consultation-peaksales"
+                data-cal-namespace="free-sales-consultation-peaksales"
+                data-cal-config='{"layout":"month_view"}'
+              >
+                Book a Free Leak Check
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <p class="services-thread">In all three, we act as your sales business analyst: we map your funnel, find where leads and revenue are lost, and fix it.</p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         6.8 HOW WE ARE PAID (paper)
+         ═══════════════════════════════════════════════════ -->
+    <section class="payment-section" id="payment" aria-labelledby="payment-heading">
+      <div class="container">
+        <div class="payment-card">
+          <div>
+            <h2 id="payment-heading">Our commission starts when your money arrives.</h2>
+            <p class="payment-body" style="margin-top:1rem;">
+              On the Dedicated Sales Team model you pay a fixed base retainer. Our commission is paid only on revenue that is closed and collected. Scope, KPIs and pricing are written down and agreed before the first call.
+            </p>
+          </div>
           <div>
             <div class="fit-columns">
-
               <div class="fit-group fit-good">
                 <h4>Good fit</h4>
                 <ul>
@@ -610,7 +723,6 @@
                   <li>B2B: SaaS, EdTech, professional services, agencies</li>
                 </ul>
               </div>
-
               <div class="fit-group fit-bad">
                 <h4>Not a fit</h4>
                 <ul>
@@ -618,24 +730,85 @@
                   <li>Businesses that need a consumer retail sales team</li>
                 </ul>
               </div>
-
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════
+         6.9 FREE CALL + FOUNDER NOTE (paper)
+         ═══════════════════════════════════════════════════ -->
+    <section class="consultation-section" id="results" aria-labelledby="consultation-heading">
+      <div class="container">
+        <div class="consultation-layout">
+
+          <!-- Left: outcomes -->
+          <div>
+            <h2 id="consultation-heading">What you leave the free call with.</h2>
+            <div class="consultation-outcomes">
+              <div class="outcome">
+                <span class="outcome-num">01</span>
+                <span class="outcome-text">Where your leads are leaking, stage by stage.</span>
+              </div>
+              <div class="outcome">
+                <span class="outcome-num">02</span>
+                <span class="outcome-text">Which of our three models fits, if any.</span>
+              </div>
+              <div class="outcome">
+                <span class="outcome-num">03</span>
+                <span class="outcome-text">A straight yes or no on whether we can help.</span>
+              </div>
+              <div class="outcome">
+                <span class="outcome-num">04</span>
+                <span class="outcome-text">What the first 30 days would look like, and when calls could start.</span>
+              </div>
+            </div>
+            <p class="consultation-meta">30 minutes · With the PeakSales team</p>
+            <button
+              class="btn btn-primary--paper btn"
+              id="consult-book-btn"
+              data-cal-link="peaksales-qsfd88/free-sales-consultation-peaksales"
+              data-cal-namespace="free-sales-consultation-peaksales"
+              data-cal-config='{"layout":"month_view"}'
+            >
+              Book a Free Leak Check
+            </button>
+          </div>
+
+          <!-- Right: founder -->
+          <div class="founder-block">
+            <img
+              class="founder-img"
+              src="images/deepan-raj.jpg"
+              alt="Deepan Raj, Founder and CEO of PeakSales"
+              width="320" height="400"
+              loading="lazy"
+            >
+            <div class="founder-name">Deepan Raj</div>
+            <div class="founder-title">Founder &amp; CEO, PeakSales Private Limited</div>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────────────────────
-         §5.9  COMPANY FACTS & LEADERSHIP
-         ───────────────────────────────────────────────────── -->
-    <section class="section company" id="company" aria-labelledby="company-heading">
+    <!-- ═══════════════════════════════════════════════════
+         6.10 COMPANY (paper)
+         ═══════════════════════════════════════════════════ -->
+    <section class="company-section section" id="company" aria-labelledby="company-heading">
       <div class="container">
+        <!-- New opener (decided by Lingesh, 2026-11-05) -->
+        <p class="section-eyebrow section-eyebrow--paper">Building Tamil Nadu's Largest Multi-Brand Sales Floor</p>
+        <h3 style="font-size:var(--h3);margin-bottom:.75rem;">Your next sales team starts here.</h3>
+        <p style="color:var(--text-muted);font-size:.9375rem;margin-bottom:2.5rem;max-width:60ch;">
+          We build, train, and manage dedicated sales teams across multiple brands, helping businesses turn leads into revenue.
+        </p>
+
         <h2 id="company-heading">A registered company, run by people you can meet.</h2>
 
         <div class="company-grid">
-
-          <!-- Facts card -->
+          <!-- Facts -->
           <div>
             <div class="facts-card" aria-label="Company legal facts">
               <div class="facts-card-title">Company facts</div>
@@ -644,238 +817,172 @@
                 <span class="facts-value">PeakSales Private Limited</span>
               </div>
               <div class="facts-row">
-                <span class="facts-key">CIN</span>
-                <span class="facts-value facts-tbd">To be confirmed</span>
-              </div>
-              <div class="facts-row">
-                <span class="facts-key">Incorporated</span>
-                <span class="facts-value facts-tbd">To be confirmed</span>
-              </div>
-              <div class="facts-row">
                 <span class="facts-key">Registered office</span>
                 <span class="facts-value">Trichy, Tamil Nadu</span>
               </div>
-              <div class="facts-row">
-                <span class="facts-key">GSTIN</span>
-                <span class="facts-value facts-tbd">To be confirmed</span>
-              </div>
-              <div class="facts-row">
-                <span class="facts-key">Email</span>
-                <span class="facts-value facts-tbd">To be confirmed</span>
-              </div>
+              <!-- CIN, GSTIN, Email, Incorporated hidden – values not confirmed -->
             </div>
           </div>
 
-          <!-- Story + leadership -->
+          <!-- Leadership -->
           <div>
             <p class="company-story">
               PeakSales Private Limited is a sales execution company based in Trichy, Tamil Nadu. Deepan Raj founded it to remove the sales bottleneck from growing businesses, so owners can focus on what they do best.
             </p>
-
-            <div class="leaders-grid">
-
-              <div class="leader-card" id="leader-deepan">
-                <div class="leader-avatar"><img src="images/deepan-raj.jpg" alt="Deepan Raj, Founder &amp; CEO"></div>
-                <div>
-                  <div class="leader-name">Deepan Raj</div>
-                  <div class="leader-title">Founder &amp; CEO</div>
-                  <p class="leader-bio">Full bio to be provided by Deepan.</p>
-                </div>
+            <div class="leader-card" id="leader-deepan">
+              <div class="leader-avatar">
+                <img src="images/deepan-raj.jpg" alt="Deepan Raj, Founder and CEO" width="72" height="72" loading="lazy">
               </div>
-
-              <div class="leader-card" id="leader-cofounder">
-                <div class="leader-avatar"><img src="images/andro-jerome.jpg" alt="Andro Jerome C, Co-Founder of PeakSales" style="object-position: center top;"></div>
-                <div>
-                  <div class="leader-name">Andro Jerome C</div>
-                  <div class="leader-title">Co-Founder</div>
-                  <p class="leader-bio">Full bio to be provided by Andro.</p>
-                </div>
+              <div>
+                <div class="leader-name">Deepan Raj</div>
+                <div class="leader-title">Founder &amp; CEO</div>
+                <!-- Bio hidden until approved -->
               </div>
-
             </div>
+            <!-- Co-founder card hidden until name confirmed -->
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────────────────────
-         §5.10  CAREERS BAND
-         ───────────────────────────────────────────────────── -->
-    <section class="section careers-band" id="careers" aria-labelledby="careers-heading">
-      <!-- Contour motif -->
-      <div class="contour-bg" aria-hidden="true">
-        <svg viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
-          <ellipse cx="200" cy="200" rx="350" ry="250" fill="none" stroke="#9DB2BF" stroke-width="1"/>
-          <ellipse cx="200" cy="200" rx="250" ry="170" fill="none" stroke="#9DB2BF" stroke-width="1"/>
-          <ellipse cx="200" cy="200" rx="150" ry="100" fill="none" stroke="#9DB2BF" stroke-width="1"/>
-        </svg>
-      </div>
-
+    <!-- ═══════════════════════════════════════════════════
+         6.11 CAREERS BAND (two doors)
+         ═══════════════════════════════════════════════════ -->
+    <section class="careers-band section" id="careers" aria-labelledby="careers-band-heading">
       <div class="container">
-        <div class="careers-band-grid">
-
-          <div class="careers-left">
-            <p class="careers-band-label">Careers</p>
-            <h2 id="careers-heading">Build a sales career with us.</h2>
-            <p class="careers-band-body">
-              PeakSales recruits, trains and manages the sales team behind every client. If you want to sell for growing businesses, start here.
-            </p>
-            <div class="careers-values">
-              <div class="careers-value">Training, scripts and day-to-day management from the PeakSales team</div>
-              <div class="careers-value">Real leads from real businesses</div>
-              <div class="careers-value">A path from caller to team lead</div>
-            </div>
-            <a href="careers.html" class="btn btn-outline-light" id="careers-band-cta">
-              See open roles
-            </a>
+        <h2 id="careers-band-heading">Build a sales career with us.</h2>
+        <div class="careers-doors">
+          <!-- Door 1: clients -->
+          <div class="door-card door-card--client">
+            <h3>Need your leads closed?</h3>
+            <button
+              class="btn btn-primary--paper btn"
+              data-cal-link="peaksales-qsfd88/free-sales-consultation-peaksales"
+              data-cal-namespace="free-sales-consultation-peaksales"
+              data-cal-config='{"layout":"month_view"}'
+            >
+              Book a Free Leak Check
+            </button>
           </div>
-
-          <div class="careers-stats">
-            <div class="careers-stat">
-              <span class="careers-stat-val">—</span>
-              <span class="careers-stat-label">Team members (coming soon)</span>
-            </div>
-            <div class="careers-stat">
-              <span class="careers-stat-val">—</span>
-              <span class="careers-stat-label">Open roles (updated regularly)</span>
-            </div>
-            <div class="careers-stat">
-              <span class="careers-stat-val">—</span>
-              <span class="careers-stat-label">Avg. time to first close</span>
-            </div>
+          <!-- Door 2: candidates -->
+          <div class="door-card door-card--candidate">
+            <h3>Want to sell for a living?</h3>
+            <p>No experience needed for caller roles. We train you.</p>
+            <a href="careers.html#apply" class="btn btn-primary" id="careers-band-apply-btn">Apply Now</a>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────────────────────
-         §5.11  FAQ
-         ───────────────────────────────────────────────────── -->
-    <section class="section faq" id="faq" aria-labelledby="faq-heading">
+    <!-- ═══════════════════════════════════════════════════
+         6.12 FAQ (paper)
+         ═══════════════════════════════════════════════════ -->
+    <section class="faq-section section" id="faq" aria-labelledby="faq-heading">
       <div class="container">
         <h2 id="faq-heading">Frequently asked questions.</h2>
-
-        <!-- Tabs -->
         <div class="faq-tabs" role="tablist" aria-label="FAQ categories">
-          <button class="faq-tab active" id="tab-business" role="tab"
-            aria-selected="true" aria-controls="panel-business">
-            For businesses
-          </button>
-          <button class="faq-tab" id="tab-candidates" role="tab"
-            aria-selected="false" aria-controls="panel-candidates">
-            For candidates
-          </button>
+          <button class="faq-tab" role="tab" id="faq-tab-business"   aria-selected="true"  aria-controls="faq-panel-business">For businesses</button>
+          <button class="faq-tab" role="tab" id="faq-tab-candidates" aria-selected="false" aria-controls="faq-panel-candidates">For candidates</button>
         </div>
 
         <!-- Panel: businesses -->
-        <div class="faq-panel active" id="panel-business" role="tabpanel" aria-labelledby="tab-business">
-
+        <div class="faq-panel active" id="faq-panel-business" role="tabpanel" aria-labelledby="faq-tab-business">
           <details class="faq-item" id="faq-pricing">
             <summary>
               How does pricing work?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </summary>
-            <div class="faq-answer">
-              It depends on the model. Dedicated Sales Team: a base retainer plus commission on closed and collected revenue. Full-Service Growth: a monthly retainer plus a performance share. Sales Optimisation: a fixed fee or retainer. We agree the numbers on the discovery call.
-            </div>
+            <div class="faq-answer">It depends on the model. Dedicated Sales Team: a base retainer plus commission on closed and collected revenue. Full-Service Growth: a monthly retainer plus a performance share. Sales Optimisation: a fixed fee or retainer. We agree the numbers on the discovery call.</div>
           </details>
-
           <details class="faq-item" id="faq-industries">
             <summary>
               What industries do you work with?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </summary>
-            <div class="faq-answer">
-              B2B businesses such as SaaS, EdTech, professional services and agencies. If your leads convert through calls and follow-ups, we can help.
-            </div>
+            <div class="faq-answer">B2B businesses such as SaaS, EdTech, professional services and agencies. If your leads convert through calls and follow-ups, we can help.</div>
           </details>
-
           <details class="faq-item" id="faq-start-time">
             <summary>
               How quickly can you start?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </summary>
-            <div class="faq-answer">
-              Within 5–7 business days after scope and onboarding are agreed.
-            </div>
+            <div class="faq-answer">Within 5-7 business days after scope and onboarding are agreed.</div>
           </details>
-
           <details class="faq-item" id="faq-vs-inhouse">
             <summary>
               How is this different from hiring our own team?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </summary>
-            <div class="faq-answer">
-              An in-house team means months of hiring, training and management. We bring a trained team and our own management from day one.
-            </div>
+            <div class="faq-answer">An in-house team means months of hiring, training and management. We bring a trained team and our own management from day one.</div>
           </details>
-
           <details class="faq-item" id="faq-leads">
             <summary>
               Do I need to provide leads?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </summary>
-            <div class="faq-answer">
-              You can bring your own: enquiries, marketing leads or an existing database. We convert them. Lead generation is part of Full-Service Growth and can be discussed separately.
-            </div>
+            <div class="faq-answer">You can bring your own: enquiries, marketing leads or an existing database. We convert them. Lead generation is part of Full-Service Growth and can be discussed separately.</div>
           </details>
-
           <details class="faq-item" id="faq-reporting">
             <summary>
               How do you report?
-              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
-              </svg>
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
             </summary>
-            <div class="faq-answer">
-              Weekly: call volume, follow-ups, lead status, conversion rate and pipeline health.
-            </div>
+            <div class="faq-answer">Weekly: call volume, follow-ups, lead status, conversion rate and pipeline health.</div>
           </details>
-
         </div>
 
         <!-- Panel: candidates -->
-        <div class="faq-panel" id="panel-candidates" role="tabpanel" aria-labelledby="tab-candidates">
-          <div class="faq-coming-soon">
-            Candidate FAQ is being prepared. Visit the <a href="careers.html" style="color:var(--ps-bronze);font-weight:600;">Careers page</a> or book a call to learn more about joining the team.
-          </div>
+        <div class="faq-panel" id="faq-panel-candidates" role="tabpanel" aria-labelledby="faq-tab-candidates">
+          <details class="faq-item">
+            <summary>
+              Do I need sales experience?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </summary>
+            <div class="faq-answer">No. Caller roles are open to freshers. We provide full training and scripts before your first call.</div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              What languages do I need to speak?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </summary>
+            <div class="faq-answer">Tamil and English are most useful, depending on the clients you support. Tell us on your application.</div>
+          </details>
+          <details class="faq-item">
+            <summary>
+              What is the career path?
+              <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </summary>
+            <div class="faq-answer">Caller to Closer to Team Lead. You grow by results.</div>
+          </details>
         </div>
-
       </div>
     </section>
 
-    <!-- ─────────────────────────────────────────────────────
-         §5.12  FINAL CTA
-         ───────────────────────────────────────────────────── -->
-    <section class="section final-cta" id="book" aria-labelledby="cta-heading">
-      <!-- Contour motif -->
-      <div class="contour-bg" aria-hidden="true">
-        <svg viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
-          <ellipse cx="600" cy="200" rx="500" ry="300" fill="none" stroke="#9DB2BF" stroke-width="1"/>
-          <ellipse cx="600" cy="200" rx="380" ry="220" fill="none" stroke="#9DB2BF" stroke-width="1"/>
-          <ellipse cx="600" cy="200" rx="260" ry="145" fill="none" stroke="#9DB2BF" stroke-width="1"/>
-          <ellipse cx="600" cy="200" rx="140" ry="80"  fill="none" stroke="#9DB2BF" stroke-width="1"/>
-        </svg>
-      </div>
-
+    <!-- ═══════════════════════════════════════════════════
+         6.13 FINAL CTA (ink bookend)
+         ═══════════════════════════════════════════════════ -->
+    <section class="final-cta section" id="book" aria-labelledby="cta-heading">
       <div class="container">
         <div class="final-cta-inner">
           <h2 id="cta-heading">Ready to see where your sales are leaking?</h2>
-          <p class="final-cta-body">
-            Book a 30-minute discovery call. We will go through your leads, your current process and your targets, and tell you honestly whether we can help.
-          </p>
+          <p class="final-cta-body">Book a 30-minute call. We will go through your leads, your current process and your targets, and tell you honestly whether we can help.</p>
+
+          <!-- 3-step start strip (moved from process section) -->
+          <div class="start-strip" aria-label="How to get started">
+            <div class="start-step">
+              <div class="start-step-verb">Connect</div>
+              <p>A 30-minute call about your leads and targets.</p>
+            </div>
+            <div class="start-step">
+              <div class="start-step-verb">Plan</div>
+              <p>We draft your team size, calling cadence, scripts and KPIs.</p>
+            </div>
+            <div class="start-step">
+              <div class="start-step-verb">Go live</div>
+              <p>Calls start within 5-7 business days of onboarding.</p>
+            </div>
+          </div>
+
           <div class="final-cta-actions">
             <button
               class="btn btn-primary"
@@ -884,47 +991,38 @@
               data-cal-namespace="free-sales-consultation-peaksales"
               data-cal-config='{"layout":"month_view"}'
             >
-              Book a discovery call
+              Book a Free Leak Check
             </button>
-            <p class="hero-micro">Free · 30 minutes · No obligation</p>
+            <span class="final-cta-micro">Free &middot; 30 minutes &middot; No obligation</span>
             <a href="careers.html" class="text-link" id="cta-careers-link">
-              Looking for a job instead? See open roles →
+              Looking for a job instead? See Open Roles <i class="ph ph-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-  </main><!-- /main -->
+  </main>
 
-  <!-- ═══════════════════════════════════════════════════════
-       §5.13  FOOTER
-       ═══════════════════════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
-
-        <!-- Col 1: Brand -->
         <div class="footer-brand">
-          <a href="/" class="footer-logo" aria-label="PeakSales - homepage">
-            <img class="footer-logo-img" src="images/logo.jpg" alt="PeakSales">
+          <a href="/" aria-label="PeakSales - homepage">
+            <img class="footer-logo-img" src="assets/logo-white.svg" alt="PeakSales" width="120" height="32" onerror="this.src='images/logo-mark-light.png'">
           </a>
           <p class="footer-tagline">PeakSales Private Limited</p>
-          <p class="footer-tagline" style="margin-top:-.25rem;">Climbing to Success Together</p>
+          <p class="footer-tagline">Trichy, Tamil Nadu, India</p>
         </div>
-
-        <!-- Col 2: Company -->
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
             <li><a href="#company">About</a></li>
-            <li><a href="#results">Results</a></li>
             <li><a href="#process">How it works</a></li>
             <li><a href="careers.html">Careers</a></li>
           </ul>
         </div>
-
-        <!-- Col 3: Services -->
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
@@ -933,35 +1031,16 @@
             <li><a href="#service-optimisation">Sales Team Optimisation</a></li>
           </ul>
         </div>
-
-        <!-- Col 4: Contact -->
         <div class="footer-col">
           <h4>Contact</h4>
           <p class="footer-contact-item">Trichy, Tamil Nadu, India</p>
-          <p class="footer-contact-item" style="font-style:italic;font-size:.75rem;color:var(--ps-mist);">Email and phone to be confirmed</p>
           <ul style="margin-top:.75rem;">
-            <li>
-              <button
-                class="text-link"
-                id="footer-book-btn"
-                data-cal-link="peaksales-qsfd88/free-sales-consultation-peaksales"
-                data-cal-namespace="free-sales-consultation-peaksales"
-                data-cal-config='{"layout":"month_view"}'
-                style="font-size:.875rem;"
-              >
-                Book a discovery call →
-              </button>
-            </li>
+            <li><a href="#book">Book a Free Leak Check &rarr;</a></li>
           </ul>
         </div>
-
-      </div><!-- /footer-grid -->
-
-      <!-- Bottom bar -->
+      </div>
       <div class="footer-bottom">
-        <p class="footer-legal">
-          © 2026 PeakSales Private Limited. All rights reserved.
-        </p>
+        <p class="footer-legal">&copy; 2026 PeakSales Private Limited. All rights reserved.</p>
         <nav class="footer-legal-links" aria-label="Legal pages">
           <a href="privacy.html">Privacy Policy</a>
           <a href="terms.html">Terms of Service</a>
@@ -970,24 +1049,7 @@
     </div>
   </footer>
 
-  <!-- Sticky mobile CTA bar -->
-  <div class="sticky-bar" role="complementary" aria-label="Book a call">
-    <button
-      class="btn btn-primary"
-      id="sticky-book-btn"
-      data-cal-link="peaksales-qsfd88/free-sales-consultation-peaksales"
-      data-cal-namespace="free-sales-consultation-peaksales"
-      data-cal-config='{"layout":"month_view"}'
-    >
-      Book a discovery call
-    </button>
-  </div>
-
-  <!-- ═══════════════════════════════════════════════════════
-       JS
-       ═══════════════════════════════════════════════════════ -->
   <script src="js/main.js" defer></script>
-
+  <script src="js/leak-check.js" defer></script>
 </body>
 </html>
-

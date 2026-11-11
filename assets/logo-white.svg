@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" fill="none">
+  <!-- Mountain mark -->
+  <g fill="#FFFFFF">
+    <!-- Left peak -->
+    <polygon points="8,48 24,12 40,48"/>
+    <!-- Center tall peak -->
+    <polygon points="28,48 48,4 68,48"/>
+    <!-- Right peak -->
+    <polygon points="56,48 72,16 88,48"/>
+    <!-- Snow caps -->
+    <polygon points="24,12 28,20 20,20" fill="#5B9BFF"/>
+    <polygon points="48,4 53,14 43,14" fill="#5B9BFF"/>
+    <polygon points="72,16 76,24 68,24" fill="#5B9BFF"/>
+  </g>
+  <!-- Text -->
+  <text x="100" y="30" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#FFFFFF" letter-spacing="2">PEAK</text>
+  <text x="100" y="52" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#FFFFFF" letter-spacing="2">SALES</text>
+</svg>

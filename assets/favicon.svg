@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <g fill="#2563EB">
+    <polygon points="4,28 12,6 20,28"/>
+    <polygon points="14,28 22,4 30,28"/>
+    <!-- Snow caps -->
+    <polygon points="12,6 14,11 10,11" fill="#FFFFFF"/>
+    <polygon points="22,4 24.5,10 19.5,10" fill="#FFFFFF"/>
+  </g>
+</svg>
